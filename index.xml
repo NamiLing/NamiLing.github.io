@@ -1,0 +1,80 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Nami&#39;s Nest</title>
+        <link>https://namiling.github.io/</link>
+        <description>I&#39;m here</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lingnanmiao@126.com (NamiL)</managingEditor>
+            <webMaster>lingnanmiao@126.com (NamiL)</webMaster><lastBuildDate>Sat, 31 Oct 2020 05:52:40 &#43;0800</lastBuildDate>
+            <atom:link href="https://namiling.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>github多账号多SSH操作神坑-macOS</title>
+    <link>https://namiling.github.io/2020-10-31-github-multiaccount-bug/</link>
+    <pubDate>Sat, 31 Oct 2020 05:52:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2020-10-31-github-multiaccount-bug/</guid>
+    <description><![CDATA[因为开了两个github账号，需要两个SSH进行上传。在分别进行了SSH绑定之后。却一直显示permisson denied。接下来说下具体的]]></description>
+</item><item>
+    <title>macOS powerlevel&#43;zsh主题折腾记录(2020)</title>
+    <link>https://namiling.github.io/2020-10-17-macos-powerlevel-zsh%E4%B8%BB%E9%A2%98%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-2020/</link>
+    <pubDate>Sat, 17 Oct 2020 00:56:03 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2020-10-17-macos-powerlevel-zsh%E4%B8%BB%E9%A2%98%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-2020/</guid>
+    <description><![CDATA[换个主题换个心情。作为长期使用命令行的人，2020年份的换心情时刻再次到来了。 基本环境 安装zsh与oh-my-zsh：网上太多教程了，自行搜]]></description>
+</item><item>
+    <title>GlobalProtect启动退出脚本(MAC)</title>
+    <link>https://namiling.github.io/2020-07-25-globalprotect%E5%90%AF%E5%8A%A8%E9%80%80%E5%87%BA%E8%84%9A%E6%9C%AC-mac/</link>
+    <pubDate>Sat, 25 Jul 2020 01:16:55 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2020-07-25-globalprotect%E5%90%AF%E5%8A%A8%E9%80%80%E5%87%BA%E8%84%9A%E6%9C%AC-mac/</guid>
+    <description><![CDATA[参考：Mac 退出与卸载 GlobalProtect mac上的Global Protect近似于流氓软件，但迫于学校要求不得不用。于是写了个shell脚本。 1 2 3 4 5 6 7]]></description>
+</item><item>
+    <title>決まった</title>
+    <link>https://namiling.github.io/2019-07-16-%E6%B1%BA%E3%81%BE%E3%81%A3%E3%81%9F/</link>
+    <pubDate>Tue, 16 Jul 2019 15:00:27 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2019-07-16-%E6%B1%BA%E3%81%BE%E3%81%A3%E3%81%9F/</guid>
+    <description><![CDATA[不写程序了，也不会做科研。到此为止吧。]]></description>
+</item><item>
+    <title>2019年04月26日</title>
+    <link>https://namiling.github.io/2019-04-26-2019%E5%B9%B404%E6%9C%8826%E6%97%A5/</link>
+    <pubDate>Fri, 26 Apr 2019 16:46:56 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2019-04-26-2019%E5%B9%B404%E6%9C%8826%E6%97%A5/</guid>
+    <description><![CDATA[看书之后随便想到的一大堆东西，反正记记据说总结思考模式会有用。 我一度以为，画画和音乐是我的幻想（病态理想型），真我应该是去适应社会的，因为适]]></description>
+</item><item>
+    <title>都挺好</title>
+    <link>https://namiling.github.io/2019-03-27-%E9%83%BD%E6%8C%BA%E5%A5%BD/</link>
+    <pubDate>Wed, 27 Mar 2019 00:11:50 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2019-03-27-%E9%83%BD%E6%8C%BA%E5%A5%BD/</guid>
+    <description><![CDATA[<p>自我发泄罢了。</p>]]></description>
+</item><item>
+    <title>使用阿里云CDN全站加速gitpages</title>
+    <link>https://namiling.github.io/2019-03-25-%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91cdn%E5%8A%A0%E9%80%9Fgitpages/</link>
+    <pubDate>Mon, 25 Mar 2019 18:15:07 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2019-03-25-%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91cdn%E5%8A%A0%E9%80%9Fgitpages/</guid>
+    <description><![CDATA[虽然折腾Gitpages的步骤网上有很多，但我还是遇到了很多坑，于是把步骤记录了下来。 加速成功的gitpages，访问速度真的快了好多好多好]]></description>
+</item><item>
+    <title>我又换主题了</title>
+    <link>https://namiling.github.io/2019-03-24-%E6%88%91%E5%8F%88%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%BA%86/</link>
+    <pubDate>Sun, 24 Mar 2019 19:23:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2019-03-24-%E6%88%91%E5%8F%88%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%BA%86/</guid>
+    <description><![CDATA[这次的主题是yilia，一个hexo官网没有的但很多人都知道的大佬的主题。移动端的优化很好。 偏重于内容，挺生活化的，搜索也很全。 本来想用Ma]]></description>
+</item><item>
+    <title>近期资源整理2018-08-17</title>
+    <link>https://namiling.github.io/2018-08-17-%E8%BF%91%E6%9C%9F%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%862018-08-17/</link>
+    <pubDate>Fri, 17 Aug 2018 01:29:21 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2018-08-17-%E8%BF%91%E6%9C%9F%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%862018-08-17/</guid>
+    <description><![CDATA[尽量弄点技术资源上的整理，或者记一点比较有趣的事。像p2p暴雷之类的就不记了。教程 1. Build CPU from scratch(英文) 从零开始建造CPU小游戏，从]]></description>
+</item><item>
+    <title>B站反查用户弹幕小记</title>
+    <link>https://namiling.github.io/2018-08-15-b%E7%AB%99%E5%8F%8D%E6%9F%A5%E7%94%A8%E6%88%B7%E5%BC%B9%E5%B9%95%E5%B0%8F%E8%AE%B0/</link>
+    <pubDate>Wed, 15 Aug 2018 01:23:49 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2018-08-15-b%E7%AB%99%E5%8F%8D%E6%9F%A5%E7%94%A8%E6%88%B7%E5%BC%B9%E5%B9%95%E5%B0%8F%E8%AE%B0/</guid>
+    <description><![CDATA[工具：Chrome浏览器 反查用户分为视频里现存的弹幕反查和历史弹幕反查。其中反查历史弹幕需要用Chrome的调试工具，需要懂一点前端，比较简]]></description>
+</item></channel>
+</rss>
