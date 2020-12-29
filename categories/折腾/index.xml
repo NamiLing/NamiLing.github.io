@@ -4,7 +4,14 @@
         <link>https://namiling.github.io/categories/%E6%8A%98%E8%85%BE/</link>
         <description>折腾 - 分类 - Nami&#39;s Nest</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lingnanmiao@126.com (NamiL)</managingEditor>
-            <webMaster>lingnanmiao@126.com (NamiL)</webMaster><lastBuildDate>Tue, 24 Nov 2020 01:15:45 &#43;0800</lastBuildDate><atom:link href="https://namiling.github.io/categories/%E6%8A%98%E8%85%BE/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>lingnanmiao@126.com (NamiL)</webMaster><lastBuildDate>Tue, 29 Dec 2020 01:15:45 &#43;0800</lastBuildDate><atom:link href="https://namiling.github.io/categories/%E6%8A%98%E8%85%BE/" rel="self" type="application/rss+xml" /><item>
+    <title>个人Onedrive分享网盘</title>
+    <link>https://namiling.github.io/2020-12-29-%E4%B8%AA%E4%BA%BAonedrive%E5%88%86%E4%BA%AB%E7%BD%91%E7%9B%98/</link>
+    <pubDate>Tue, 29 Dec 2020 01:15:45 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2020-12-29-%E4%B8%AA%E4%BA%BAonedrive%E5%88%86%E4%BA%AB%E7%BD%91%E7%9B%98/</guid>
+    <description><![CDATA[drive.namichan.site 闲来无事用OneDrive+OneManager+阿里云函数计算搭了个可以分享的Onedrive。Onedrive的账号是淘宝买的，5T容]]></description>
+</item><item>
     <title>Mac上如何开机与关机时自动运行Shell脚本</title>
     <link>https://namiling.github.io/2020-11-24-mac%E4%B8%8A%E5%A6%82%E4%BD%95%E5%BC%80%E6%9C%BA%E4%B8%8E%E5%85%B3%E6%9C%BA%E6%97%B6%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8Cshell%E8%84%9A%E6%9C%AC/</link>
     <pubDate>Tue, 24 Nov 2020 01:15:45 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://namiling.github.io/2018-02-06-macos%E4%BD%BF%E7%94%A8markdown%E5%90%8C%E6%AD%A5%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
     <description><![CDATA[<p>自从接触了markdown语法爱不释手，简单美观，又能专注于写作。但是平时写笔记的印象笔记并不支持markdown，如果写的是发布一些文章还要笔记重排版，十分麻烦。直到偶然看到了atom 上有人贡献的<a href="https://www.evernote.com/shard/s68/sh/782d6000-361f-4963-b3c1-84ff6af2b625/971f599e4c39cd8f" target="_blank" rel="noopener noreffer">ever-notedown</a>插件。觉得这就是我要找的终极解决方案。</p>]]></description>
-</item><item>
-    <title>macOS百度网盘下载方法备份</title>
-    <link>https://namiling.github.io/2018-03-27-macos%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E5%A4%87%E4%BB%BD/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://namiling.github.io/2018-03-27-macos%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E5%A4%87%E4%BB%BD/</guid>
-    <description><![CDATA[记录一些有关于百度云限速破解的工具。 proxyee-down 安装和使用看这个页面。 这是最近才发现的项目，非常好用，因为自带嗅探模式，点下载按钮就直接跳到proxy]]></description>
 </item></channel>
 </rss>
