@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Mac - 标签 - Nami&#39;s Nest</title>
+        <link>https://namiling.github.io/tags/mac/</link>
+        <description>Mac - 标签 - Nami&#39;s Nest</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lingnanmiao@126.com (NamiL)</managingEditor>
+            <webMaster>lingnanmiao@126.com (NamiL)</webMaster><lastBuildDate>Tue, 24 Nov 2020 01:15:45 &#43;0800</lastBuildDate><atom:link href="https://namiling.github.io/tags/mac/" rel="self" type="application/rss+xml" /><item>
+    <title>Mac上如何开机与关机时自动运行Shell脚本</title>
+    <link>https://namiling.github.io/2020-11-24-mac%E4%B8%8A%E5%A6%82%E4%BD%95%E5%BC%80%E6%9C%BA%E4%B8%8E%E5%85%B3%E6%9C%BA%E6%97%B6%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8Cshell%E8%84%9A%E6%9C%AC/</link>
+    <pubDate>Tue, 24 Nov 2020 01:15:45 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2020-11-24-mac%E4%B8%8A%E5%A6%82%E4%BD%95%E5%BC%80%E6%9C%BA%E4%B8%8E%E5%85%B3%E6%9C%BA%E6%97%B6%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8Cshell%E8%84%9A%E6%9C%AC/</guid>
+    <description><![CDATA[网上讲如何开机运行脚本的很多，但我有关机时关闭远程服务的需求。于是上外网查了一下如何在关机时执行一段脚本。 新建一个shell文件 这个shel]]></description>
+</item></channel>
+</rss>

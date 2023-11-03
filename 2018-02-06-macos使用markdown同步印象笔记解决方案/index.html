@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>macOS使用markdown同步印象笔记解决方案 - Nami&#39;s Nest</title><meta name="Description" content="I&#39;m here"><meta property="og:title" content="macOS使用markdown同步印象笔记解决方案" />
+<meta property="og:description" content="自从接触了markdown语法爱不释手，简单美观，又能专注于写作。但是平时写笔记的印象笔记并不支持markdown，如果写的是发布一些文章还要笔记重排版，十分麻烦。直到偶然看到了atom 上有人贡献的ever-notedown插件。觉得这就是我要找的终极解决方案。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://namiling.github.io/2018-02-06-macos%E4%BD%BF%E7%94%A8markdown%E5%90%8C%E6%AD%A5%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" /><meta property="og:image" content="https://namiling.github.io/logo.png"/><meta property="article:section" content="posts" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://namiling.github.io/logo.png"/>
+
+<meta name="twitter:title" content="macOS使用markdown同步印象笔记解决方案"/>
+<meta name="twitter:description" content="自从接触了markdown语法爱不释手，简单美观，又能专注于写作。但是平时写笔记的印象笔记并不支持markdown，如果写的是发布一些文章还要笔记重排版，十分麻烦。直到偶然看到了atom 上有人贡献的ever-notedown插件。觉得这就是我要找的终极解决方案。"/>
+<meta name="application-name" content="Nami&#39;s Nest">
+<meta name="apple-mobile-web-app-title" content="Nami&#39;s Nest"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://namiling.github.io/2018-02-06-macos%E4%BD%BF%E7%94%A8markdown%E5%90%8C%E6%AD%A5%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" /><link rel="prev" href="https://namiling.github.io/2018-03-27-macos%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E5%A4%87%E4%BB%BD/" /><link rel="next" href="https://namiling.github.io/2018-02-06-hello-2018/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "macOS使用markdown同步印象笔记解决方案",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/namiling.github.io\/2018-02-06-macos%E4%BD%BF%E7%94%A8markdown%E5%90%8C%E6%AD%A5%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88\/"
+        },"genre": "posts","keywords": "工具, markdown","wordcount":  978 ,
+        "url": "https:\/\/namiling.github.io\/2018-02-06-macos%E4%BD%BF%E7%94%A8markdown%E5%90%8C%E6%AD%A5%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88\/","publisher": {
+            "@type": "Organization",
+            "name": "NamiL"},"author": {
+                "@type": "Person",
+                "name": "NamiL"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Nami&#39;s Nest">Nami&#39;s Nest</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 归档 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Nami&#39;s Nest">Nami&#39;s Nest</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">归档</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="关于">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">macOS使用markdown同步印象笔记解决方案</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>NamiL</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%98%E8%85%BE/"><i class="far fa-folder fa-fw"></i>折腾</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 978 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/2018-02-06-macos%E4%BD%BF%E7%94%A8markdown%E5%90%8C%E6%AD%A5%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="leancloud_visitors" data-flag-title="macOS使用markdown同步印象笔记解决方案">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#原理">原理</a></li>
+    <li><a href="#准备">准备</a></li>
+    <li><a href="#基本使用">基本使用</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#导入本地印象笔记">导入本地印象笔记</a></li>
+            <li><a href="#插入图片">插入图片</a></li>
+            <li><a href="#markdown笔记管理">markdown笔记管理</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#已知bug">已知bug</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>自从接触了markdown语法爱不释手，简单美观，又能专注于写作。但是平时写笔记的印象笔记并不支持markdown，如果写的是发布一些文章还要笔记重排版，十分麻烦。直到偶然看到了atom 上有人贡献的<a href="https://www.evernote.com/shard/s68/sh/782d6000-361f-4963-b3c1-84ff6af2b625/971f599e4c39cd8f" target="_blank" rel="noopener noreffer">ever-notedown</a>插件。觉得这就是我要找的终极解决方案。</p>
+<h2 id="原理">原理</h2>
+<p>大部分markdown编辑器对印象笔记的支持都只限于发布，而不是同步。这是由于markdown自身的单向输出特点的决定的。</p>
+<p>ever-notedown通过Apple Script读取印象笔记客户端的内容、同步印象笔记。也正因如此，只适用于macOS平台。</p>
+<p>插件的思路和马克飞象非常相似，从印象笔记pull一条笔记转化为md，并储存在本机上。修改时可以修改本机的md后更新到印象笔记客户端。也可以在印象笔记客户端修改后，重新pull下来。相当于一个离线的evernote编辑器。</p>
+<p>如果将存放md的文件夹云同步，或者使用github仓库，还可以进行版本控制。</p>
+<h2 id="准备">准备</h2>
+<ul>
+<li>macOS系统</li>
+<li>dmg安装的Evernote6.0以上的客户端（不能是App Store的）</li>
+</ul>
+<blockquote>
+<p>目前最新的客户端是6.13，在使用插件时经常崩溃，建议下6.5及之前的版本。</p>
+</blockquote>
+<ul>
+<li>atom编辑器</li>
+<li>在atom编辑器内安装插件ever-notedown（以下用evnd简称）</li>
+</ul>
+<h2 id="基本使用">基本使用</h2>
+<h4 id="导入本地印象笔记">导入本地印象笔记</h4>
+<p>在Packages-&gt;Ever Notedown-&gt; Toggle EVND Panel里有import from evernote。可以在搜索印象笔记客户端存在的笔记。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="http://upload-images.jianshu.io/upload_images/4693292-a6b83bf57c09edbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+        data-srcset="http://upload-images.jianshu.io/upload_images/4693292-a6b83bf57c09edbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240, http://upload-images.jianshu.io/upload_images/4693292-a6b83bf57c09edbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 1.5x, http://upload-images.jianshu.io/upload_images/4693292-a6b83bf57c09edbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 2x"
+        data-sizes="auto"
+        alt="http://upload-images.jianshu.io/upload_images/4693292-a6b83bf57c09edbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+        title="Toggle Panel" /></p>
+<p>导入成功后就可以使用markdown开始编辑了。
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="http://upload-images.jianshu.io/upload_images/4693292-c8eeca7876db4e57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+        data-srcset="http://upload-images.jianshu.io/upload_images/4693292-c8eeca7876db4e57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240, http://upload-images.jianshu.io/upload_images/4693292-c8eeca7876db4e57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 1.5x, http://upload-images.jianshu.io/upload_images/4693292-c8eeca7876db4e57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 2x"
+        data-sizes="auto"
+        alt="http://upload-images.jianshu.io/upload_images/4693292-c8eeca7876db4e57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+        title="Success" /></p>
+<h4 id="插入图片">插入图片</h4>
+<p>插入图片也非常方便，支持拖动图片至编辑器与屏幕截屏的直接粘贴</p>
+<h4 id="markdown笔记管理">markdown笔记管理</h4>
+<p>在markdown里面可以查看和删除已经转换为md的笔记。已经按所属的笔记本归类了。 <img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="http://upload-images.jianshu.io/upload_images/4693292-d11969b29c932532.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+        data-srcset="http://upload-images.jianshu.io/upload_images/4693292-d11969b29c932532.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240, http://upload-images.jianshu.io/upload_images/4693292-d11969b29c932532.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 1.5x, http://upload-images.jianshu.io/upload_images/4693292-d11969b29c932532.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 2x"
+        data-sizes="auto"
+        alt="http://upload-images.jianshu.io/upload_images/4693292-d11969b29c932532.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+        title="note management" /></p>
+<p>上面是一部分基本功能，完整功能看这里<a href="https://www.evernote.com/shard/s68/sh/782d6000-361f-4963-b3c1-84ff6af2b625/971f599e4c39cd8f" target="_blank" rel="noopener noreffer">ever-notedown</a>。</p>
+<h2 id="已知bug">已知bug</h2>
+<p>很可惜的该插件已经很久没有维护过了，因此随着印象笔记客户端版本的更新，不兼容性越来越多。在印象笔记6.13的客户端已经闪退为体验非常糟心。在我所使用的印象笔记6.5的版本也有一个比较影响体验bug。</p>
+<ul>
+<li>在evnd里新建的笔记无法创建到印象笔记里面。</li>
+</ul>
+<p>最好的方法是先在印象笔记里建一条空笔记，然后再import进evnd。</p>
+<p>能不能接受这个稍微繁琐的操作就因人而异了。对于我主要是需要多平台发布的文章需要md格式存档，平时的笔记使用evernote足够。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 0001-01-01</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://namiling.github.io/2018-02-06-macos%E4%BD%BF%E7%94%A8markdown%E5%90%8C%E6%AD%A5%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" data-title="macOS使用markdown同步印象笔记解决方案" data-hashtags="工具,markdown"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://namiling.github.io/2018-02-06-macos%E4%BD%BF%E7%94%A8markdown%E5%90%8C%E6%AD%A5%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" data-hashtag="工具"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://namiling.github.io/2018-02-06-macos%E4%BD%BF%E7%94%A8markdown%E5%90%8C%E6%AD%A5%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" data-title="macOS使用markdown同步印象笔记解决方案"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>,&nbsp;<a href="/tags/markdown/">markdown</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2018-03-27-macos%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E5%A4%87%E4%BB%BD/" class="prev" rel="prev" title="macOS百度网盘下载方法备份"><i class="fas fa-angle-left fa-fw"></i>macOS百度网盘下载方法备份</a>
+            <a href="/2018-02-06-hello-2018/" class="next" rel="next" title="Welcome to Nami&#39;s blog">Welcome to Nami&#39;s blog<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.84.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">NamiL</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"YDYRUoYWO1wiJbXCHIuoL9vg-MdYXbMMI","appKey":"emKQWQwT7QapLvaogbiJvMcs","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"Say something","recordIP":true,"visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Mac上如何开机与关机时自动运行Shell脚本 - Nami&#39;s Nest</title><meta name="Description" content="I&#39;m here"><meta property="og:title" content="Mac上如何开机与关机时自动运行Shell脚本" />
+<meta property="og:description" content="网上讲如何开机运行脚本的很多，但我有关机时关闭远程服务的需求。于是上外网查了一下如何在关机时执行一段脚本。 新建一个shell文件 这个shel" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://namiling.github.io/2020-11-24-mac%E4%B8%8A%E5%A6%82%E4%BD%95%E5%BC%80%E6%9C%BA%E4%B8%8E%E5%85%B3%E6%9C%BA%E6%97%B6%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8Cshell%E8%84%9A%E6%9C%AC/" /><meta property="og:image" content="https://namiling.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-11-24T01:15:45&#43;08:00" />
+<meta property="article:modified_time" content="2020-11-24T01:15:45&#43;08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://namiling.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Mac上如何开机与关机时自动运行Shell脚本"/>
+<meta name="twitter:description" content="网上讲如何开机运行脚本的很多，但我有关机时关闭远程服务的需求。于是上外网查了一下如何在关机时执行一段脚本。 新建一个shell文件 这个shel"/>
+<meta name="application-name" content="Nami&#39;s Nest">
+<meta name="apple-mobile-web-app-title" content="Nami&#39;s Nest"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://namiling.github.io/2020-11-24-mac%E4%B8%8A%E5%A6%82%E4%BD%95%E5%BC%80%E6%9C%BA%E4%B8%8E%E5%85%B3%E6%9C%BA%E6%97%B6%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8Cshell%E8%84%9A%E6%9C%AC/" /><link rel="prev" href="https://namiling.github.io/2020-11-23-%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7%E5%A4%9A%E9%81%87%E5%88%B0%E7%9A%84ssh%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/" /><link rel="next" href="https://namiling.github.io/2020-12-29-%E4%B8%AA%E4%BA%BAonedrive%E5%88%86%E4%BA%AB%E7%BD%91%E7%9B%98/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Mac上如何开机与关机时自动运行Shell脚本",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/namiling.github.io\/2020-11-24-mac%E4%B8%8A%E5%A6%82%E4%BD%95%E5%BC%80%E6%9C%BA%E4%B8%8E%E5%85%B3%E6%9C%BA%E6%97%B6%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8Cshell%E8%84%9A%E6%9C%AC\/"
+        },"genre": "posts","keywords": "Shell, Mac","wordcount":  762 ,
+        "url": "https:\/\/namiling.github.io\/2020-11-24-mac%E4%B8%8A%E5%A6%82%E4%BD%95%E5%BC%80%E6%9C%BA%E4%B8%8E%E5%85%B3%E6%9C%BA%E6%97%B6%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8Cshell%E8%84%9A%E6%9C%AC\/","datePublished": "2020-11-24T01:15:45+08:00","dateModified": "2020-11-24T01:15:45+08:00","publisher": {
+            "@type": "Organization",
+            "name": "NamiL"},"author": {
+                "@type": "Person",
+                "name": "NamiL"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="auto" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Nami&#39;s Nest">Nami&#39;s Nest</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 归档 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Nami&#39;s Nest">Nami&#39;s Nest</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">归档</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="关于">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Mac上如何开机与关机时自动运行Shell脚本</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>NamiL</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%98%E8%85%BE/"><i class="far fa-folder fa-fw"></i>折腾</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-24">2020-11-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 762 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/2020-11-24-mac%E4%B8%8A%E5%A6%82%E4%BD%95%E5%BC%80%E6%9C%BA%E4%B8%8E%E5%85%B3%E6%9C%BA%E6%97%B6%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8Cshell%E8%84%9A%E6%9C%AC/" class="leancloud_visitors" data-flag-title="Mac上如何开机与关机时自动运行Shell脚本">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#新建一个shell文件">新建一个shell文件</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>网上讲如何开机运行脚本的很多，但我有关机时关闭远程服务的需求。于是上外网查了一下如何在关机时执行一段脚本。</p>
+<h2 id="新建一个shell文件">新建一个shell文件</h2>
+<p>这个shell中包含了你需要开机关机时运行的脚本。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="k">function</span> shutdown<span class="o">()</span>
+<span class="o">{</span>
+
+  <span class="c1"># 关机用的脚本放这里</span>
+
+  <span class="nb">exit</span> <span class="m">0</span>
+<span class="o">}</span>
+
+<span class="k">function</span> startup<span class="o">()</span>
+<span class="o">{</span>
+
+  <span class="c1"># 开机用的脚本放这里</span>
+
+  tail -f /dev/null <span class="p">&amp;</span>
+  <span class="nb">wait</span> <span class="nv">$!</span>
+<span class="o">}</span>
+
+<span class="nb">trap</span> shutdown SIGTERM
+<span class="nb">trap</span> shutdown SIGKILL
+
+startup<span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>以上文件我取名为launchdeamon，赋予了当前用户的执行权限。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">chmod <span class="m">755</span> launchdaemon
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="新建plist文件">新建plist文件</h1>
+<p>为了让launchdeamon能在开机时自动运行，需要编写一个相应plist文件，使用launctl做到开机启动。关于launchctl和plist的作用，请先查看这篇文章：<a href="https://www.jianshu.com/p/b65c1d339eec" target="_blank" rel="noopener noreffer">Mac执行定时任务之launchctl</a>。</p>
+<p>plist文件的内容如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC &#34;-//Apple//DTD PLIST 1.0//EN&#34; &#34;http://www.apple.com/DTDs/PropertyList-1.0.dtd&#34;&gt;</span>
+<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&#34;1.0&#34;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+<span class="nt">&lt;key&gt;</span>Label<span class="nt">&lt;/key&gt;&lt;string&gt;</span>boot-shutdown<span class="nt">&lt;/string&gt;</span>
+
+<span class="nt">&lt;key&gt;</span>ProgramArguments<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;array&gt;</span>
+  <span class="nt">&lt;string&gt;</span>$SCRIPT_PATH/launchdaemon<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/array&gt;</span>
+
+<span class="nt">&lt;key&gt;</span>RunAtLoad<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;true/&gt;</span>
+
+<span class="nt">&lt;key&gt;</span>StandardOutPath<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>$LOG_PATH/boot-shutdown.log<span class="nt">&lt;/string&gt;</span>
+
+<span class="nt">&lt;key&gt;</span>StandardErrorPath<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>$PLOG_PATH/boot-shutdown.err<span class="nt">&lt;/string&gt;</span>
+
+<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>plist文件以键值对的形式存储信息。以上文件的字段解释：</p>
+<ul>
+<li><code>Label</code>：标签，也就是运行该plist显示的名字。这里为boot-shutdown</li>
+<li><code>ProgramArguments</code>：<code>array</code>里可以存放多个需要运行程序。这里的<code>$SCRIPT_PATH</code>请自己修改。</li>
+<li><code>RunAtLoad</code>：开机自启，为<code>true</code></li>
+<li><code>StandardOutPath</code>：打印标准输出到某个文件，方便查看程序后台运行的结果，<code>$LOG_PATH</code>自行修改。</li>
+<li><code>StandardErrorPath</code>：打印标准错误到某个文件，同上。</li>
+</ul>
+<p>以上文件我取名为 boot-shutdown-script.plist 。</p>
+<p>由于shell脚本的执行权限是当前用户，以上文件需要放入当前用户的开机启动文件夹，即为  ~/Library/LaunchAgents 。</p>
+<p>然后将plist文件加入开启启动：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">launchctl load ~/Library/LaunchAgents/boot-shutdown-script.plist
+</code></pre></td></tr></table>
+</div>
+</div><p>此时重启后，可以使用以下命令查看脚本运行状态</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">launchctl list <span class="p">|</span> grep boot
+</code></pre></td></tr></table>
+</div>
+</div><p>输出为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">438	0	boot-shutdown
+</code></pre></td></tr></table>
+</div>
+</div><p>第一个是pid。第二个为状态码，为0说明正常运行中。</p>
+<hr>
+<p>参考：</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/24200924/run-a-script-only-at-shutdown-not-log-off-or-restart-on-mac-os-x" target="_blank" rel="noopener noreffer">Run a script only at shutdown (not log off or restart) on Mac OS X</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-11-24</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://namiling.github.io/2020-11-24-mac%E4%B8%8A%E5%A6%82%E4%BD%95%E5%BC%80%E6%9C%BA%E4%B8%8E%E5%85%B3%E6%9C%BA%E6%97%B6%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8Cshell%E8%84%9A%E6%9C%AC/" data-title="Mac上如何开机与关机时自动运行Shell脚本" data-hashtags="Shell,Mac"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://namiling.github.io/2020-11-24-mac%E4%B8%8A%E5%A6%82%E4%BD%95%E5%BC%80%E6%9C%BA%E4%B8%8E%E5%85%B3%E6%9C%BA%E6%97%B6%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8Cshell%E8%84%9A%E6%9C%AC/" data-hashtag="Shell"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://namiling.github.io/2020-11-24-mac%E4%B8%8A%E5%A6%82%E4%BD%95%E5%BC%80%E6%9C%BA%E4%B8%8E%E5%85%B3%E6%9C%BA%E6%97%B6%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8Cshell%E8%84%9A%E6%9C%AC/" data-title="Mac上如何开机与关机时自动运行Shell脚本"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/shell/">Shell</a>,&nbsp;<a href="/tags/mac/">Mac</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2020-11-23-%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7%E5%A4%9A%E9%81%87%E5%88%B0%E7%9A%84ssh%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/" class="prev" rel="prev" title="多个Github账号遇到的SSH权限问题"><i class="fas fa-angle-left fa-fw"></i>多个Github账号遇到的SSH权限问题</a>
+            <a href="/2020-12-29-%E4%B8%AA%E4%BA%BAonedrive%E5%88%86%E4%BA%AB%E7%BD%91%E7%9B%98/" class="next" rel="next" title="个人Onedrive分享网盘">个人Onedrive分享网盘<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.84.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">NamiL</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"YDYRUoYWO1wiJbXCHIuoL9vg-MdYXbMMI","appKey":"emKQWQwT7QapLvaogbiJvMcs","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"Say something","recordIP":true,"visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

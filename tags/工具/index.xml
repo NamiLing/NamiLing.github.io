@@ -1,0 +1,50 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>工具 - 标签 - Nami&#39;s Nest</title>
+        <link>https://namiling.github.io/tags/%E5%B7%A5%E5%85%B7/</link>
+        <description>工具 - 标签 - Nami&#39;s Nest</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lingnanmiao@126.com (NamiL)</managingEditor>
+            <webMaster>lingnanmiao@126.com (NamiL)</webMaster><lastBuildDate>Sat, 07 Aug 2021 15:16:44 &#43;0800</lastBuildDate><atom:link href="https://namiling.github.io/tags/%E5%B7%A5%E5%85%B7/" rel="self" type="application/rss+xml" /><item>
+    <title>Github Hosts mac 自动更新</title>
+    <link>https://namiling.github.io/2021-08-07-github-hosttools/</link>
+    <pubDate>Sat, 07 Aug 2021 15:16:44 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2021-08-07-github-hosttools/</guid>
+    <description><![CDATA[最近 Github 经常连不上。写了个 Shell 工具，连不上的时候就更新一下Host。可以配合 Alfred 使用。 此工具已更新至 Github。附有安装和卸载脚本。 使用的 host 源来]]></description>
+</item><item>
+    <title>macOS powerlevel&#43;zsh主题折腾记录(2020)</title>
+    <link>https://namiling.github.io/2020-10-17-macos-powerlevel-zsh%E4%B8%BB%E9%A2%98%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-2020/</link>
+    <pubDate>Sat, 17 Oct 2020 00:56:03 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2020-10-17-macos-powerlevel-zsh%E4%B8%BB%E9%A2%98%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95-2020/</guid>
+    <description><![CDATA[换个主题换个心情。作为长期使用命令行的人，2020年份的换心情时刻再次到来了。 基本环境 安装zsh与oh-my-zsh：网上太多教程了，自行搜]]></description>
+</item><item>
+    <title>GlobalProtect启动退出脚本(MAC)</title>
+    <link>https://namiling.github.io/2020-07-25-globalprotect%E5%90%AF%E5%8A%A8%E9%80%80%E5%87%BA%E8%84%9A%E6%9C%AC-mac/</link>
+    <pubDate>Sat, 25 Jul 2020 01:16:55 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2020-07-25-globalprotect%E5%90%AF%E5%8A%A8%E9%80%80%E5%87%BA%E8%84%9A%E6%9C%AC-mac/</guid>
+    <description><![CDATA[参考：Mac 退出与卸载 GlobalProtect mac上的Global Protect近似于流氓软件，但迫于学校要求不得不用。于是写了个shell脚本。 1 2 3 4 5 6 7]]></description>
+</item><item>
+    <title>使用pandoc转换md为PDF并添加中文支持</title>
+    <link>https://namiling.github.io/2018-02-06-%E4%BD%BF%E7%94%A8pandoc%E8%BD%AC%E6%8D%A2md%E4%B8%BApdf%E5%B9%B6%E6%B7%BB%E5%8A%A0%E4%B8%AD%E6%96%87%E6%94%AF%E6%8C%81/</link>
+    <pubDate>Tue, 06 Feb 2018 17:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2018-02-06-%E4%BD%BF%E7%94%A8pandoc%E8%BD%AC%E6%8D%A2md%E4%B8%BApdf%E5%B9%B6%E6%B7%BB%E5%8A%A0%E4%B8%AD%E6%96%87%E6%94%AF%E6%8C%81/</guid>
+    <description><![CDATA[<p>由于最近需要把markdown文件导出为pdf并且需要用到latex的行内的数学公式，只用typora无法做到，于是开始使用pandoc。问题是pandoc中在从md转pdf的时候需要手动设置中文，否则会有转换问题。这个坑查了很久，最终从一个pandoc模板里得到了解决方法。</p>]]></description>
+</item><item>
+    <title>macOS使用markdown同步印象笔记解决方案</title>
+    <link>https://namiling.github.io/2018-02-06-macos%E4%BD%BF%E7%94%A8markdown%E5%90%8C%E6%AD%A5%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2018-02-06-macos%E4%BD%BF%E7%94%A8markdown%E5%90%8C%E6%AD%A5%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+    <description><![CDATA[<p>自从接触了markdown语法爱不释手，简单美观，又能专注于写作。但是平时写笔记的印象笔记并不支持markdown，如果写的是发布一些文章还要笔记重排版，十分麻烦。直到偶然看到了atom 上有人贡献的<a href="https://www.evernote.com/shard/s68/sh/782d6000-361f-4963-b3c1-84ff6af2b625/971f599e4c39cd8f" target="_blank" rel="noopener noreffer">ever-notedown</a>插件。觉得这就是我要找的终极解决方案。</p>]]></description>
+</item><item>
+    <title>macOS百度网盘下载方法备份</title>
+    <link>https://namiling.github.io/2018-03-27-macos%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E5%A4%87%E4%BB%BD/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2018-03-27-macos%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95%E5%A4%87%E4%BB%BD/</guid>
+    <description><![CDATA[记录一些有关于百度云限速破解的工具。 proxyee-down 安装和使用看这个页面。 这是最近才发现的项目，非常好用，因为自带嗅探模式，点下载按钮就直接跳到proxy]]></description>
+</item></channel>
+</rss>

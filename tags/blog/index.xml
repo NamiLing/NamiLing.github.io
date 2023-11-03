@@ -1,0 +1,43 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>blog - 标签 - Nami&#39;s Nest</title>
+        <link>https://namiling.github.io/tags/blog/</link>
+        <description>blog - 标签 - Nami&#39;s Nest</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lingnanmiao@126.com (NamiL)</managingEditor>
+            <webMaster>lingnanmiao@126.com (NamiL)</webMaster><lastBuildDate>Mon, 25 Mar 2019 18:15:07 &#43;0800</lastBuildDate><atom:link href="https://namiling.github.io/tags/blog/" rel="self" type="application/rss+xml" /><item>
+    <title>使用阿里云CDN全站加速gitpages</title>
+    <link>https://namiling.github.io/2019-03-25-%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91cdn%E5%8A%A0%E9%80%9Fgitpages/</link>
+    <pubDate>Mon, 25 Mar 2019 18:15:07 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2019-03-25-%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91cdn%E5%8A%A0%E9%80%9Fgitpages/</guid>
+    <description><![CDATA[虽然折腾Gitpages的步骤网上有很多，但我还是遇到了很多坑，于是把步骤记录了下来。 加速成功的gitpages，访问速度真的快了好多好多好]]></description>
+</item><item>
+    <title>我又换主题了</title>
+    <link>https://namiling.github.io/2019-03-24-%E6%88%91%E5%8F%88%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%BA%86/</link>
+    <pubDate>Sun, 24 Mar 2019 19:23:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2019-03-24-%E6%88%91%E5%8F%88%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%BA%86/</guid>
+    <description><![CDATA[这次的主题是yilia，一个hexo官网没有的但很多人都知道的大佬的主题。移动端的优化很好。 偏重于内容，挺生活化的，搜索也很全。 本来想用Ma]]></description>
+</item><item>
+    <title>hexo&#43;gitpages&#43;mweb快速新建文章并发布博客更新（macOS）</title>
+    <link>https://namiling.github.io/2018-06-16-hexo-gitpages-mweb%E5%BF%AB%E9%80%9F%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0%E5%B9%B6%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0macos/</link>
+    <pubDate>Sat, 16 Jun 2018 00:12:49 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2018-06-16-hexo-gitpages-mweb%E5%BF%AB%E9%80%9F%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0%E5%B9%B6%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0macos/</guid>
+    <description><![CDATA[阅读前提: 已经用hexo搭建好静态博客，并已经能用hexo d命令发布到gitpages 习惯使用mweb管理md文档 在使用hexo的时候，发现]]></description>
+</item><item>
+    <title>从Jekyll到Hexo</title>
+    <link>https://namiling.github.io/2018-06-14-%E4%BB%8Ejekyll%E5%88%B0hexo/</link>
+    <pubDate>Thu, 14 Jun 2018 23:33:03 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2018-06-14-%E4%BB%8Ejekyll%E5%88%B0hexo/</guid>
+    <description><![CDATA[Jekyll还是怎么都觉得不好用，换成了Hexo，主题用的最大众的NexT。 首先要明白博客的定位。既然是博客，就是给人看的，随便的笔记就不要]]></description>
+</item><item>
+    <title>Welcome to Nami&#39;s blog</title>
+    <link>https://namiling.github.io/2018-02-06-hello-2018/</link>
+    <pubDate>Tue, 06 Feb 2018 12:00:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://namiling.github.io/2018-02-06-hello-2018/</guid>
+    <description><![CDATA[欢迎来到一个平凡的博客。 这个博客包含的是发布后不会再更改的文章，不会包含个人笔记，一是发布之后更新起来着实麻烦，二是过于琐碎，三是markd]]></description>
+</item></channel>
+</rss>
